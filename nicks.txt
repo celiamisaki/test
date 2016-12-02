@@ -1,0 +1,1 @@
+["tanpaid", "<f x12FF0000='0'> <f x12FF5F00='0'>T<f x12FFBE00='0'>a<f x12A0FF00='0'>n<f x1241FF00='0'>p<f x1200FF5F='0'>a<f x1200FFBE='0'>i<f x1200A0FF='0'>d Chan *h*"]
