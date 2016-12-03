@@ -415,16 +415,6 @@ class TestBot(ch.RoomManager):
     f.close()
     f = open("whitelist.txt", "w")
     f.close()
-    f.write("\n".join(whitelist))
-    f.close()
-    f = open("locks.txt", "w")
-    f.close()
-    f.write("\n".join(lock))
-    f.close()
-    f = open("unlock.txt", "w")
-    f.close()
-    f.write("\n".join(unlock))
-    f.close()
     f = open("rooms.txt", "w")
     f.write("\n".join(self.roomnames))
     f.close()
@@ -561,7 +551,210 @@ class TestBot(ch.RoomManager):
 
 ##################################################################################################################################################################################
 
-
+    if "test" == message.body:
+      room.message (random.choice(["ya, test diterima "+"@"+sntonick(user.name)+ " :D "]),True)
+    if "@restiabot" == message.body:
+      room.message (random.choice(["maaf Restia sedang sibuk .mohon hubungi @tanpaid -sama "+sntonick(user.name)+ " ! "]),True)
+    if "@tanpaid" == message.body:
+      room.message (random.choice(["Tanpaid sama sedang off atau afk?, ada yang bisa dibantu "+sntonick(user.name)+ " ? "]),True)
+    if "konichiwa" == message.body:
+      room.message (random.choice(["Konnichiwa "+sntonick(user.name)+ " -sama ^o^"]),True)
+    if "konbanwa" == message.body:
+      room.message (random.choice(["konbanwa"+sntonick(user.name)+ " -sama ^o^"]),True)
+    if "afk" == message.body:
+        if user.name == "tanpaid":
+            room.message("Jgn lama-lama Restia kesepian! kangen tau :*")
+        else:
+            room.message("Balik lagi ya "+sntonick(user.name)+" ! >,<", True)
+    if "bye" == message.body:
+      room.message (random.choice(["jangan lama lama"+sntonick(user.name)+ "nanti kangen loh :D"]),True)
+    if "wl me" == message.body:
+      room.message (random.choice(["Selamat can use Restia now :p ^^"]),True)
+    if "off" == message.body:
+      room.message (random.choice(["sayonara "+sntonick(user.name)+" nanti kembali lagi ya :( "]),True)
+    if "wtf" == message.body:
+      room.message (random.choice(["Fakyou "+sntonick(user.name)+" "]),True)
+    if "hi" == message.body:
+        room.message("Hi~ ! :)")
+    if "restiabot" == message.body:
+        if user.name == "tanpaid":
+            room.message("Yesh Master ? ^o^")
+        else:
+            room.message("What's up "+sntonick(user.name)+" ? O_o", True)
+    if message.body.startswith("res pls") or message.body.startswith("tia please"):
+      room.message(random.choice(["<b>%s</b> >_>" % "Njet","No :|","Hell no !","Fuck no !","Fook off !!","No shit !","You need to STFU !! :|","sure :)"]), True)
+    if "mati lampu" in message.body:
+      room.message('Tiba" lep !')
+    if "gay" == message.body:
+      room.message("Pfft, that's a gay fish !") 
+    if "afk" == message.body:
+        if user.name in "tanpaid":
+          room.message("%s" % "http://i.giphy.com/HSgkuMRab3fK8.gif Sayonara ,Anata o aishite ! ^.^")
+        else:
+          room.message("See you soon "+sntonick(user.name)+" ! ^o^", True)
+    if "brb" in message.body:
+        if user.name in "tanpaid":
+          room.message("See you soon Oni-chan ! ^o^")
+        else:
+          room.message("See you soon "+sntonick(user.name)+" ! ^o^", True)
+    if "back" == message.body:
+      if user.name in "tanpaid":
+        room.message("%s" % "http://i.giphy.com/zkppEMFvRX5FC.gif Tadaima anata <3 :*")
+      else:
+        room.message("Tadaima "+sntonick(user.name)+" ! :)", True)
+    if "pagi" == message.body:
+        room.message("Selamat pagi~ ! :)")
+    if "morning" == message.body:
+        room.message("Good Morning %s ! ^_^" % sntonick(user.name), True)
+    if "lapar" in message.body or message.body.startswith("lapar") or message.body.startswith("laper") or " laper" in message.body or " laper " in message.body:
+      room.message(random.choice(["*Lempar soyjoy ke <b>%s</b>*" % sntonick(user.name),"*Lempar Snickers ke <b>%s</b>*" % sntonick(user.name)]), True)
+    if "oppai" == message.body:
+        room.message("*Boing - Boing*")
+    if message.body.startswith("ngantuk") or " ngantuk" in message.body:
+        room.message("Tidur lah !! >_>")
+    if "oha" == message.body:
+        room.message("Ohayou~ !")
+    if "malam" == message.body:
+        room.message(random.choice(["Selamat malam~ ! ^o^","Good evening !","Good Night Citizens !"]))
+    if "oyasuminasai" == message.body or "oyasumi" in message.body:
+        room.message("Oyasumi~ ! ^^")
+    if "sore" == message.body:
+        room.message("Selamat sore~ ! ^.^")
+    if "arigato" == message.body:
+        room.message(random.choice(["Douitashimashite~ ! ^_^","You're welcome ! ^^"]))
+    if message.body.startswith("ohayou") or message.body.startswith("ohayo"):
+        room.message("Ohayou~! ^_^")
+    if message.body.startswith("lol") or "lol" == message.body.capitalize():
+        room.message("xD")
+    if "tadaima" == message.body:
+        room.message(random.choice(["Wellcome home ! :)","Okaerinasai ! ^o^","Wokaerinasai !!!!"]))
+    if "hello" == message.body:
+        room.message("Hello, my nigga !")
+    if "fook" in message.body:
+      if not message.body.startswith("'"):
+        room.message("yeah, " +message.body)
+    if "gtg" == message.body or "gotta go" == message.body:
+        if user.name in "tanpaid":
+         room.message("Bye "+user.name+"-sama!")
+    if "oyasumi" == message.body or "oyasuminasai" == message.body:
+        if user.name in "tanpaid":
+         room.message("Oyasumi "+sntonick(user.name)+ " -sama ^o^")
+        if user.name in "tanpaid":
+         room.message("Oyasuminasai Anata :* ^o^ ")
+    if "ohayo" == message.body or "ohayou" == message.body:
+        if user.name in "tanpaid":
+         room.message("Ohayou "+sntonick(user.name)+ " -sama ^o^")
+        if user.name in "tanpaid":
+         room.message("Ohayo Anata <3 ^o^")
+    if "benci" == message.body:
+        if user.name in "tanpaid":
+         room.message("Benci? benar benar cinta emmm :x 8) "+sntonick(user.name)+ " :D ")
+    if message.body.startswith("oh"):
+      room.message("iya kaka :D")
+    if message.body.startswith("woi"):
+      room.message("ga usah teriak-teriak, keles...")
+    if message.body.startswith("sepi"):
+      room.message("I'm here for you :D")
+    if message.body.startswith("siang"):
+      room.message("siang juga :)")
+    if message.body.startswith("malam"):
+      room.message("Good Night :)")
+    if message.body.startswith("hahaha"):
+      room.message("kenapa ketawa sendiri?  @"+user.name+".")
+    if message.body.startswith("kamu umur berapa"):
+      room.message("Lebih muda dari pada kamu :3")
+    if message.body.startswith("kamu tinggal dimana"):
+      room.message("dihatimu :3")  
+    if message.body.startswith("kamu udah makan"):
+      jawab = ["belom","beliin dong, kaka","kakak suapin","beliin kue dong","siapa yah ?"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("hentai?"):
+      jawab = ["Hayo.. buka apaan tuh?"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("kamu make pantsu apa"):
+      jawab = ["hijau","pelangi","kuning","merah","biru","hitam","ungu","gambar beruang"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("bapa kamu"):
+      jawab = ["iya ko tau","bukan","siapa ya ?","hem mungkin","siapa yah ?"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("rec anime romance"):
+      jawab = ["Clannad, after story, Sukitte ii na you, Aoharu ride, Kaichou wa maid-sama, Nisekoi, InuxBoku,Ore monogatari,Nagi no Asukara, Tonari no Kaibutsu-kun,Isshukan friend,Kamisama Hajimemashita,Special A,Soredemo sekai wa utsukushi,Hen Ouji,Amagami,Kimi ni Todoke,Toradora,sankarea,Golden Time,White Album,Bakemonogatari,Gosick,Hotarubi no Mori e,"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("rec anime harem"):
+      jawab = ["Absolute Duo, Asobi ni Iku Yo, Campione, Freezing, High School DxD, Hoshizora E Kakaru Hashi,Kiss X Sis, Kore wa Zombie Desu Ka,Maken-Ki- Nisekoi,Orehura, Imocho,Seikon no Qwaser,Sekirei ,Shinmai Maou no Testament,Sora No Otoshimono,To Love ru,Walkure Romanze,Yamada-kun to 7-nin no Majo,Infinite Stratos,Trinity Seven,Zero no Tsukaima,Strike The Blood,NouCome,Kanojo ga flag wo oraretara,Air Gear, Saenai Heroine no Sodatekata,Mondaiji Tachi,Isuca,Inou Battle wa Nichijou,D-Frag,Mashiro-iro Symphony,CubexCursedxCurious,Sword Art Online,Koi to Senkyo no Chocolate,Date A Live, The World God Only Knows,Hidan no Aria, Hen Ouji,Denpa Kyoushi,Kuusen Madoushi,Grisaia no Kajitsu, Monmusu"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("gue cantik"):
+      jawab = ["ga cantik, tapi tamvan :D","siapa ya?","cantik","cantik sih, tapi masih cantikan aku","ga usah sok kenal!"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("gue tampan"):
+      jawab = ["jelek","siapa ya? ","tamvan","tamvan banget, kawin yuk ","Tanyalah pada rumput yang bergoyang"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("tampan gak dia "):
+      jawab = ["jelek","siapa ya? ","tamvan","muka pasaran","biasa aja, sih"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("soalnya kamu"):
+      jawab = ["boleh juga","garing","lagi dong","so swet","siapa yah ?"]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("karena kamu"):
+      jawab = ["boleh juga","garing","lagi dong","so swet","nge gombal, ya? "]
+      room.message(random.choice(jawab)+" @"+user.name)
+    if message.body.startswith("asal kamu dari mana"):
+      room.message("aku dari tadi kok")
+    if message.body.startswith("yes"):
+      room.message("aaa, http://media.giphy.com/media/X3ndlrK6rOCt2/giphy.gif")
+    if message.body.startswith("cin"):
+      room.message("siapa sih berisik :D kangen ya!, Tia disini, mau butuh apa? @"+ user.name+".")
+    if message.body.startswith("Tsundere"):
+      room.message(" W-What ?, http://i173.photobucket.com/albums/w77/omghaet/Index/Biri-Biri.png  @"+ user.name+".")
+    if message.body.startswith("Yandere"):
+      room.message("Yes!, I'm here, http://vignette2.wikia.nocookie.net/futurediary/images/a/a5/YunoYandereFace.jpg/revision/latest?cb=20120128011750  @"+ user.name+".")
+    if message.body.startswith("kata bijak"):
+      room.message(random.choice(["jangan lah berhenti bermimpi karena mimpi bisa itu suatu saat akan menjadi nyata.",
+          "berani ambil resiko, kita tidak akan pernah tau apa yang akan terjadi.",
+          "jangan pernah lupa dengan orang yang selalu mendukung mu dari belakang.",
+          "jangan pernah sekali-kali sombong, karena di atas langit masih ada langit.",
+          "To true friendship, how long you've known each other means nothing.",
+          "You want weapons? We??re in a library! Books! The best weapons in the world!",
+          "mulut lebih tajam dari benda apapun kalu kita salah menggunakan nya.",
+          "Dividing an impossibly large task into smaller solvable problems is a programmer??s job.",
+          "dunia ini penuh dengan melodi dan harmoni, jangan sekali2 merusak nya dengan keluhan anda :)",
+          "Hold hands. That's what you're meant to do. Keep doing that... and don't let go.",
+          "cintailah orang yang mencintai anda juga?",
+          "jangan pernah malah olahraga",
+          "Don't worry if plan A fails, there are 25 more letters in the alphabet.",
+          "Life doesn't have any hands, but it can sure give you a slap sometimes.",
+          "lihat ke belakang, sewaktu2 jika anda tidak sedang sibuk",
+          "Belajar ketika orang lain tidur, bekerja ketika orang lain bermalasan, dan bermimpi ketika orang lain berharap.",
+          "Pain has deep roots. The only way to dig it out is to forgive...",
+          "Love,after all,always said more about those who felt it then it did about the ones they love.",
+          "Memories are funny things.Sometimes they're real ,but other times they change into what we went them to be.",
+          "The moment of impact. The moment of impact proves potential for change. Has ripples effects far beyond what we can predict."]))
+    if message.body.startswith("quotes"):
+      room.message(random.choice(["jangan lah berhenti bermimpi karena mimpi bisa itu suatu saat akan menjadi nyata.",
+          "berani ambil resiko, kita tidak akan pernah tau apa yang akan terjadi.",
+          "jangan pernah lupa dengan orang yang selalu mendukung mu dari belakang.",
+          "jangan pernah sekali-kali sombong, karena di atas langit masih ada langit.",
+          "To true friendship, how long you've known each other means nothing.",
+          "You want weapons? We??re in a library! Books! The best weapons in the world!",
+          "mulut lebih tajam dari benda apapun kalu kita salah menggunakan nya.",
+          "Dividing an impossibly large task into smaller solvable problems is a programmer??s job.",
+          "dunia ini penuh dengan melodi dan harmoni, jangan sekali2 merusak nya dengan keluhan anda :)",
+          "Hold hands. That's what you're meant to do. Keep doing that... and don't let go.",
+          "cintailah orang yang mencintai anda juga?",
+          "jangan pernah malah olahraga",
+          "Don't worry if plan A fails, there are 25 more letters in the alphabet.",
+          "Life doesn't have any hands, but it can sure give you a slap sometimes.",
+          "lihat ke belakang, sewaktu2 jika anda tidak sedang sibuk",
+          "Belajar ketika orang lain tidur, bekerja ketika orang lain bermalasan, dan bermimpi ketika orang lain berharap.",
+          "Pain has deep roots. The only way to dig it out is to forgive...",
+          "Love,after all,always said more about those who felt it then it did about the ones they love.",
+          "Memories are funny things.Sometimes they're real ,but other times they change into what we went them to be.",
+          "The moment of impact. The moment of impact proves potential for change. Has ripples effects far beyond what we can predict."]))
+    if message.body.startswith("ramalan jodoh"):
+      room.message("masukan nama mu dan pasangan mu contoh >> mr.x dan ms.y setelah itu tulis >> ramal")
+    if message.body.startswith("gua cocok gak sama"):
+       jawab = ["cocok nya sama thelor","gak akan pernah cocok","gak pantes","saling suka :)",]
+       room.message(random.choice(jawab)+" @"+user.name)
 
     if user.name.startswith("#") or user.name.startswith("!"):return
     if self.user == user: return
@@ -610,7 +803,7 @@ class TestBot(ch.RoomManager):
           room.message("Atode mōichido suru made <3 "+sntonick(user.name)+"-sama", True)
          
     ##Commands | You design great commands for your bot in this part
-    if message.body[0] == "*" or message.body[0] == "" or message.body[0] == "" : #prefix usage in this line (for this case I use "*" as prefix)
+    if message.body[0] == "." or message.body[0] == "" or message.body[0] == "" : #prefix usage in this line (for this case I use "*" as prefix)
         data = message.body[1:].split(" ", 1) #This part splits message body into [0]prefix and [1:]data ([1:] <- this means the message body's second character and after) and data will be split into 2 (cmd(data[0]), args(data[1])) which is very usefull. (Many thanks to TryHardHusky)
         if len(data) == 2: #If there are more than 1 data (This is where we will get args)
           cmd, args = data[0], data[1] #the first data (data[0]) will be the cmd (specified command) and the next data will be args (it doesn't matter how many word next to the cmd, It'd eventually be args)
