@@ -1686,9 +1686,9 @@ class TestBot(ch.RoomManager):
                 print(line)
                 offline = True
             if offline:
-              room.message(random.choice([" %s " % args+" está <f x12FF0000='1'> Offline "]), True)
+              room.message(random.choice([" %s " % args+" 適度な <f x12FF0000='1'> [OFFLINE] "]), True)
             if not offline:
-              room.message(random.choice([" %s " % args+" está <f x1233CC00='1'> Online "]), True)
+              room.message(random.choice([" %s " % args+" 適度な <f x1233CC00='1'> [ONLINE] "]), True)
 
 
         elif cmd=="profile" and args != "":
