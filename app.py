@@ -591,9 +591,7 @@ class TestBot(ch.RoomManager):
 
     if "test" in message.body:
       room.message (random.choice(["ya, test diterima "+"@"+sntonick(user.name)+ " :D "]),True)
-    if "@RestiaBot" in message.body:
-      room.message (random.choice(["maaf Restia sedang sibuk .mohon hubungi @tanpaid -sama "+sntonick(user.name)+ " ! "]),True)
-    if "@TanpaID" in message.body:
+    if "@TanpaID" in message.body or "@tanpaid" in message.body:
       room.message (random.choice(["Tanpaid sama sedang off atau afk?, ada yang bisa dibantu "+sntonick(user.name)+ " ? "]),True)
     if "konichiwa" in message.body:
       room.message (random.choice(["Konnichiwa "+sntonick(user.name)+ " -sama ^o^"]),True)
@@ -605,8 +603,6 @@ class TestBot(ch.RoomManager):
       room.message (random.choice(["sayonara "+sntonick(user.name)+" nanti kembali lagi ya :( "]),True)
     if "wtf" in message.body:
       room.message (random.choice(["Fakyou "+sntonick(user.name)+" "]),True)
-    if "hi" in message.body:
-        room.message("Hi~ ! :)")
     if "res pls" in message.body:
       room.message(random.choice(["<b>%s</b> >_>" % "Njet","No :|","Hell no !","Fuck no !","Fook off !!","No shit !","You need to STFU !! :|","sure :)"]), True)
     if "mati lampu" in message.body:
@@ -734,7 +730,6 @@ class TestBot(ch.RoomManager):
           "dunia ini penuh dengan melodi dan harmoni, jangan sekali2 merusak nya dengan keluhan anda :)",
           "Hold hands. That's what you're meant to do. Keep doing that... and don't let go.",
           "cintailah orang yang mencintai anda juga?",
-          "jangan pernah malah olahraga",
           "Don't worry if plan A fails, there are 25 more letters in the alphabet.",
           "Life doesn't have any hands, but it can sure give you a slap sometimes.",
           "lihat ke belakang, sewaktu2 jika anda tidak sedang sibuk",
