@@ -674,7 +674,7 @@ class TestBot(ch.RoomManager):
     if "malam" in message.body:
       room.message("Good Night :)")
     if "hahaha" in message.body:
-      room.message("kenapa ketawa sendiri?  @"+user.name+"gila ya *lol*.")
+      room.message("kenapa ketawa sendiri?  @"+user.name+" gila ya *lol*.")
     if "umur" in message.body:
       room.message("Lebih muda dari pada kamu :3")
     if "tinggal" in message.body:
