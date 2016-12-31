@@ -605,7 +605,7 @@ class TestBot(ch.RoomManager):
       room.message (random.choice(["sayonara "+sntonick(user.name)+" nanti kembali lagi ya :( "]),True)
     if "wtf" in message.body:
       room.message (random.choice(["Fakyou "+sntonick(user.name)+" "]),True)
-    if "hi" in message.body:
+    if "hi" == message.body:
         room.message("Hi~ ! :)")
     if "res pls" in message.body:
       room.message(random.choice(["<b>%s</b> >_>" % "Njet","No :|","Hell no !","Fuck no !","Fook off !!","No shit !","You need to STFU !! :|","sure :)"]), True)
@@ -779,7 +779,7 @@ class TestBot(ch.RoomManager):
     if user.name in blacklist: return
     if self.getAccess(room, user) > 0:
       if not activated and self.getAccess(room, user) > 1: return #return, if not activated and user rank is less than 4.
-      if "Res" == message.body.lower() or "tia" == message.body.lower() or "restiabot" == message.body.lower() or "res" in message.body :
+      if "tia" message.body.lower() or "res" in message.body :
         rank = self.getAccess(room, user)
         if rank == 1:
            room.message(random.choice(["%s" % "Watashi wa koko ni imasu? "+sntonick(user.name) ,"Restia disini:D "+sntonick(user.name),"Mōshiwakearimasenga, watashi wa isogashī ndesu "+sntonick(user.name)]), True)
