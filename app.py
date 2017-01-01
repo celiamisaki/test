@@ -591,8 +591,6 @@ class TestBot(ch.RoomManager):
 
     if "test" in message.body:
       room.message (random.choice(["ya, test diterima "+"@"+sntonick(user.name)+ " :D "]),True)
-    if "@TanpaID" in message.body or "@tanpaid" in message.body:
-      room.message (random.choice(["Tanpaid sama sedang off atau afk?, ada yang bisa dibantu "+sntonick(user.name)+ " ? "]),True)
     if "konichiwa" in message.body:
       room.message (random.choice(["Konnichiwa "+sntonick(user.name)+ " -sama ^o^"]),True)
     if "konbanwa" in message.body:
@@ -774,7 +772,7 @@ class TestBot(ch.RoomManager):
     if user.name in blacklist: return
     if self.getAccess(room, user) > 0:
       if not activated and self.getAccess(room, user) > 1: return #return, if not activated and user rank is less than 4.
-      if "tia" == message.body.lower() or "res" == message.body.lower() :
+      if "tia" in message.body or "res" == message.body.lower() :
         rank = self.getAccess(room, user)
         if rank == 1:
            room.message(random.choice(["%s" % "Watashi wa koko ni imasu? "+sntonick(user.name) ,"Restia disini:D "+sntonick(user.name),"Mōshiwakearimasenga, watashi wa isogashī ndesu "+sntonick(user.name)]), True)
