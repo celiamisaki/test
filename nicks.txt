@@ -1,1 +1,1 @@
-["ozx", "<f x12FF0000='0'>Y<f x12FF4C00='0'>u<f x12FF9800='0'>k<f x12FFE400='0'>k<f x12B3FF00='0'>i<f x1267FF00='0'>Y<f x121BFF00='0'>u<f x1200FF4C='0'>n<f x1200FF98='0'>n<f x1200FFE4='0'>a Sama :x *h*"]
+["0zx", "<f x12FF0000='0'>Y<f x12FF4C00='0'>u<f x12FF9800='0'>k<f x12FFE400='0'>k<f x12B3FF00='0'>i<f x1267FF00='0'>Y<f x121BFF00='0'>u<f x1200FF4C='0'>n<f x1200FF98='0'>n<f x1200FFE4='0'>a Sama :x *h*"]
