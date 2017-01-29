@@ -670,17 +670,13 @@ class TestBot(ch.RoomManager):
           "Love,after all,always said more about those who felt it then it did about the ones they love.",
           "Memories are funny things.Sometimes they're real ,but other times they change into what we went them to be.",
           "The moment of impact. The moment of impact proves potential for change. Has ripples effects far beyond what we can predict."]))
-    if "spam" in message.body:
-      room.message("jgn spam chat kaka nanti kena banned 15mnt loh >.<")
-    if "link" in message.body:
-      room.message("jgn share link sini kaka lewat pm ajh *lol*")
 
     if user.name.startswith("#") or user.name.startswith("!"):return
     if self.user == user: return
     if user.name in blacklist: return
     if self.getAccess(room, user) > 0:
       if not activated and self.getAccess(room, user) > 1: return #return, if not activated and user rank is less than 4.
-      if "res" == message.body.lower() or "tia" == message.body.lower() or "@restiabot" == message.body.lower() or "res" in message.body.lower() :
+      if "restia" == message.body.lower() or  "restia" in message.body.lower() :
         rank = self.getAccess(room, user)
         if rank == 1:
            room.message(random.choice(["%s" % "Watashi wa koko ni imasu? "+sntonick(user.name) ,"Restia disini:D "+sntonick(user.name),"Mōshiwakearimasenga, watashi wa isogashī ndesu "+sntonick(user.name)]), True)
@@ -693,7 +689,7 @@ class TestBot(ch.RoomManager):
         if rank == 5:
            room.message(random.choice(["%s" % "Watashi wa koko ni imasu? "+sntonick(user.name) ,"Restia disini:D "+sntonick(user.name),"Mōshiwakearimasenga, watashi wa isogashī ndesu "+sntonick(user.name)]), True)
         if rank == 6:
-          room.message("Nani mo shien suru koto ga dekimasendeshita ? Kangen ya? "+sntonick(user.name)+"-sama", True)
+          room.message("Nani mo shien suru koto ga dekimasendeshita ?? "+sntonick(user.name)+"-sama", True)
       if "afk" in message.body.lower() or "Afk"== message.body.lower():
         rank = self.getAccess(room, user)
         if rank == 1:
