@@ -619,9 +619,6 @@ class TestBot(ch.RoomManager):
          room.message("Ohayo Anata <3 ^o^")
     if "sepi" in message.body:
       room.message("Restia Disini untukmu :x :x ")
-    if "hentai" in message.body:
-      jawab = ["Hayo.. buka apaan tuh?"]
-      room.message(random.choice(jawab)+" @"+user.name)
     if "cium" in message.body or "kiss" in message.body:
       room.message("nih :x , http://media.giphy.com/media/X3ndlrK6rOCt2/giphy.gif")
     if "tsundere" in message.body:
